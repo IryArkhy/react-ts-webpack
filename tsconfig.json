@@ -2,7 +2,7 @@
   "compilerOptions": {
     "target": "ES2018",
     "rootDir": "./src",
-    "outDir": "./public",
+    "outDir": "./dist",
     "composite": true,
     "jsx": "react-jsx",
     "esModuleInterop": true,

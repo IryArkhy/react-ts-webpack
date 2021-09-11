@@ -10,7 +10,6 @@ module.exports = {
     'plugin:import/warnings',
     'plugin:import/typescript',
     'prettier',
-    'prettier/react',
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -32,6 +31,9 @@ module.exports = {
     'react/react-in-jsx-scope': 0,
     'react/jsx-filename-extension': ['warn', { extensions: ['ts', '.tsx'] }],
     'import/prefer-default-export': 0,
+    'no-console': 2,
+    'import/no-dynamic-require': 0,
+    'global-require': 0,
     // airbnb issue
     'import/extensions': [
       'error',
