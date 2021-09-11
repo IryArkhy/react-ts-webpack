@@ -6,6 +6,8 @@
   "scripts": {
     "start": "webpack serve --config ./webpack.config.js --mode development",
     "build": "webpack",
+    "lint": "eslint src --ext js,ts,tsx,jsx",
+    "stylelint:fix": "npx stylelint \"**/*.{css,scss,sass}\" --fix",
     "test": "test"
   },
   "keywords": [
