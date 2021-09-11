@@ -8,7 +8,8 @@
     "build": "webpack",
     "lint": "eslint src --ext js,ts,tsx,jsx",
     "stylelint:fix": "npx stylelint \"**/*.{css,scss,sass}\" --fix",
-    "test": "test"
+    "test": "test",
+    "prepare": "husky install"
   },
   "keywords": [
     "react",
@@ -46,7 +47,7 @@
     "file-loader": "^6.2.0",
     "html-loader": "^2.1.2",
     "html-webpack-plugin": "^5.3.2",
-    "husky": "^7.0.2",
+    "husky": "^7.0.0",
     "img-loader": "^4.0.0",
     "lint-staged": "^11.1.2",
     "mini-css-extract-plugin": "^2.2.2",
@@ -54,6 +55,7 @@
     "postcss-loader": "^6.1.1",
     "postcss-preset-env": "^6.7.0",
     "prettier": "^2.4.0",
+    "pretty-quick": "^3.1.1",
     "sass": "^1.39.0",
     "sass-loader": "^12.1.0",
     "style-loader": "^3.2.1",
