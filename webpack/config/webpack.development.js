@@ -1,3 +1,6 @@
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
 module.exports = () => ({
   devtool: 'inline-source-map',
   module: {
@@ -36,14 +39,12 @@ module.exports = () => ({
       },
     ],
   },
-  // plugins: [
-  //   new ESLintPlugin({
-  //     extensions: ['js', 'ts', 'tsx', 'jsx'],
-  //     fix: true,
-  //     failOnError: true,
-  //     failOnWarning: true,
-  //   }),
-  // ],
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: './index.html',
+    }),
+    new CleanWebpackPlugin(),
+  ],
   devServer: {
     historyApiFallback: true,
     compress: true,

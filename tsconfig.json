@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "target": "ES2018",
-    "rootDir": "./src",
+    "rootDir": ".",
     "outDir": "./dist",
     "composite": true,
     "jsx": "react-jsx",
@@ -12,9 +12,7 @@
     "noUnusedParameters": true,
     "stripInternal": true,
     "forceConsistentCasingInFileNames": true,
-    "types": [
-      "node"
-    ],
+    "types": ["node", "cypress"],
     "allowJs": true,
     "module": "ES6",
     "noImplicitAny": true,
@@ -24,15 +22,15 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "strictNullChecks": true,
-    "sourceMap": true,
+    "sourceMap": true
   },
-  "include": [
-    "src/**/*"
-  ],
+  "include": ["src/**/*"],
   "exclude": [
     "node_modules",
     "**/*.spec.ts",
+    "**/*.spec.tsx",
     "**/*.test.ts",
-    "**/*.test.tsx"
+    "**/*.test.tsx",
+    "cypress"
   ]
 }

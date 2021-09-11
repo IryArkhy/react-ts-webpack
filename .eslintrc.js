@@ -2,6 +2,8 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
+    'jest/globals': true,
+    'cypress/globals': true,
   },
   extends: [
     'plugin:react/recommended',
@@ -9,6 +11,8 @@ module.exports = {
     'plugin:import/errors',
     'plugin:import/warnings',
     'plugin:import/typescript',
+    'plugin:cypress/recommended',
+    'plugin:jest/recommended',
     'prettier',
   ],
   parser: '@typescript-eslint/parser',
@@ -19,7 +23,7 @@ module.exports = {
     ecmaVersion: 12,
     sourceType: 'module',
   },
-  plugins: ['react', '@typescript-eslint'],
+  plugins: ['react', '@typescript-eslint', 'jest', 'cypress'],
   settings: {
     'import/resolver': {
       node: {
@@ -46,4 +50,18 @@ module.exports = {
       },
     ],
   },
+  overrides: [
+    {
+      files: ['*.spec.tsx', '*.spec.jsx', '*.spec.ts', '*.spec.js'],
+      rules: {
+        'jest/expect-expect': 0,
+        'jest/valid-expect': 0,
+        'import/no-extraneous-dependencies': 0,
+      },
+    },
+    {
+      files: ['*.development.js', '*.production.js'],
+      rules: { 'import/no-extraneous-dependencies': 0 },
+    },
+  ],
 };
