@@ -27,6 +27,16 @@ module.exports = {
       },
     },
   },
+  overrides: [
+    {
+      files: [
+        'webpack.development.js',
+        'webpack.production.js',
+        'webpack.base.js',
+      ],
+      rules: { 'import/no-extraneous-dependencies': 0 },
+    },
+  ],
   rules: {
     'react/react-in-jsx-scope': 0,
     'react/jsx-filename-extension': ['warn', { extensions: ['ts', '.tsx'] }],
